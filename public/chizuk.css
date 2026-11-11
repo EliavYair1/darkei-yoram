@@ -1,0 +1,219 @@
+.chizuk-page {
+  padding-block: 20px 48px;
+}
+
+.chizuk-breadcrumb {
+  display: flex;
+  gap: 8px;
+  margin-block-end: 13px;
+  color: #425e5b;
+  font-size: 14px;
+}
+
+.chizuk-breadcrumb a,
+.chizuk-source {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.chizuk-banner {
+  padding: clamp(22px, 5vw, 58px);
+  border-radius: 23px;
+  background:
+    radial-gradient(ellipse at 4% 100%, #35786d, transparent 64%),
+    linear-gradient(110deg, #15594f, #173647 70%);
+  color: #fff8e7;
+}
+
+.chizuk-banner .eyebrow {
+  margin: 0 0 8px;
+  color: #ffe3a0;
+}
+
+.chizuk-banner h1 {
+  margin: 0;
+  color: inherit;
+  font-size: clamp(35px, 5.7vw, 68px);
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+.chizuk-banner h1 em {
+  color: #ffe3a0;
+  font-style: normal;
+}
+
+.chizuk-banner > p:last-child {
+  max-width: 48ch;
+  margin: 12px 0 0;
+  color: #f8f7ed;
+  font-size: clamp(16px, 2vw, 20px);
+  line-height: 1.45;
+}
+
+.chizuk-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  align-items: start;
+  gap: clamp(17px, 4vw, 42px);
+  margin-top: 22px;
+}
+
+.chizuk-featured {
+  min-width: 0;
+  padding: clamp(15px, 3vw, 25px);
+  border-radius: 17px;
+  background: #edf5ef;
+}
+
+.chizuk-featured-label {
+  margin: 0 0 3px;
+  color: #346358;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.chizuk-layout h2 {
+  margin: 0;
+  color: #173c40;
+  font-size: clamp(24px, 3.3vw, 34px);
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+#chizuk-title {
+  scroll-margin-top: 115px;
+}
+
+.chizuk-player {
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  min-height: 210px;
+  margin: 13px 0 9px;
+  border-radius: 13px;
+  background: #102b31;
+}
+
+.chizuk-poster {
+  grid-area: 1 / 1;
+  display: block;
+  width: 100%;
+  height: clamp(230px, 34vw, 360px);
+  object-fit: contain;
+}
+
+.chizuk-player .button {
+  grid-area: 1 / 1;
+  align-self: end;
+  margin: 0 10px 11px;
+  min-height: 44px;
+  border-radius: 999px;
+  font-size: 15px;
+}
+
+.chizuk-player:has(.video-frame) {
+  background: #0b2425;
+}
+
+.chizuk-player .video-frame {
+  width: min(100%, 294px);
+  aspect-ratio: 9 / 16;
+  margin: 0;
+  border: 0;
+  background: #0b2425;
+}
+
+.chizuk-source {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 44px;
+  color: #20584e;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.chizuk-library p {
+  margin: 6px 0 14px;
+  color: #43615f;
+  font-size: 16px;
+}
+
+#chizuk-playlist {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 9px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#chizuk-playlist a {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  height: 100%;
+  min-height: 65px;
+  padding: 9px 10px;
+  border: 1px solid #c8dbd2;
+  border-radius: 13px;
+  background: #f6faf6;
+  color: #174645;
+  line-height: 1.25;
+}
+
+#chizuk-playlist a:is([aria-current="true"], :hover, :focus-visible) {
+  background: #dceee3;
+  border-color: #46796a;
+}
+
+.chizuk-source .icon {
+  width: 15px;
+  height: 15px;
+}
+
+.chizuk-clip-thumbnail {
+  flex: 0 0 37px;
+  width: 37px;
+  height: 45px;
+  border-radius: 7px;
+  object-fit: cover;
+  object-position: center 46%;
+  background: #d4e7de;
+}
+
+#chizuk-playlist small,
+#chizuk-playlist strong {
+  display: block;
+}
+
+#chizuk-playlist small {
+  margin-block-end: 3px;
+  color: #375f55;
+  font-size: 13px;
+}
+
+#chizuk-playlist strong {
+  font-size: 16px;
+}
+
+@media (max-width: 850px) {
+  .chizuk-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  #chizuk-title {
+    scroll-margin-top: 76px;
+  }
+}
+
+@media (max-width: 370px) {
+  #chizuk-playlist {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.chizuk-guest-link {
+  margin-block-start: 15px;
+}

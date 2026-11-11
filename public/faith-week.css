@@ -1,0 +1,373 @@
+:root {
+  --faith-ink: #163247;
+  --faith-muted: #536963;
+  --faith-paper: #faf8f2;
+  --faith-rule: #dce4dd;
+  --faith-gold: #efd47a;
+}
+
+.home-faith-access {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.12fr);
+  gap: 32px;
+  margin-block: 28px 46px;
+  align-items: stretch;
+}
+.home-faith-feature {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: clamp(24px, 4vw, 42px);
+  background: #142f45;
+  color: #fffdf5;
+  border-radius: 24px;
+}
+.home-faith-feature h2 {
+  color: inherit;
+  font-size: clamp(27px, 3.4vw, 40px);
+  margin-block: 0 9px;
+}
+.home-faith-feature p {
+  color: #e0e7e8;
+  font-size: 17px;
+  line-height: 1.65;
+}
+.home-faith-start {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 18px;
+  padding: 10px 18px;
+  min-height: 44px;
+  background: var(--faith-gold);
+  color: var(--faith-ink);
+  border-radius: 99px;
+  font-size: 16px;
+  font-weight: 700;
+}
+.home-faith-topics {
+  padding: 12px 0;
+  min-width: 0;
+}
+.home-faith-topics h2 {
+  font-family: var(--font-text);
+  color: var(--faith-ink);
+  font-size: 23px;
+  font-weight: 700;
+  margin: 0 0 6px;
+}
+.home-faith-topic-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.home-faith-topic-list li + li {
+  border-top: 1px solid var(--faith-rule);
+}
+.home-faith-topic-list a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 49px;
+  padding: 8px 5px;
+  color: var(--faith-ink);
+  font-size: 17px;
+  font-weight: 600;
+  border-radius: 6px;
+}
+.home-faith-topic-list a:hover { background: #f1f3ec; }
+.home-faith-topic-list a span { color: #526c61; }
+.home-faith-quiet {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  color: #34564d;
+  font-size: 15px;
+  font-weight: 600;
+}
+.yoram-slide-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+}
+.yoram-slide-actions .yoram-slide-link { margin-top: 0; }
+.yoram-slide-actions .yoram-series-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding-inline: 3px;
+  color: #fff6d7;
+  font-weight: 700;
+  font-size: 15px;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+.faith-week-library-promo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  min-height: 44px;
+  margin-block-end: 14px;
+  background: #f6efdc;
+  color: #263b44;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 12px;
+}
+.faith-week-library-promo span { margin-inline-start: auto; }
+.home-faith-access a:focus-visible,
+.yoram-series-link:focus-visible,
+.faith-week-library-promo:focus-visible,
+.faith-week-page :is(a, button):focus-visible {
+  outline: 3px solid #99712b;
+  outline-offset: 3px;
+}
+.home-faith-feature a:focus-visible,
+.yoram-series-link:focus-visible { outline-color: var(--faith-gold); }
+
+.faith-week-page {
+  background: var(--faith-paper);
+  color: var(--faith-ink);
+  padding-bottom: 0;
+}
+.faith-week-page [hidden] { display: none; }
+.faith-week-page > header {
+  position: static;
+  background: #fffefa;
+  border-bottom: 1px solid var(--faith-rule);
+}
+.faith-week-nav,
+.faith-week-footer .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+}
+.faith-week-nav { min-height: 72px; padding-block: 10px; }
+.faith-week-brand { display: grid; gap: 2px; color: var(--faith-ink); }
+.faith-week-brand strong { font-family: var(--font-heading); font-size: 22px; font-weight: 400; }
+.faith-week-brand span { font-size: 13px; color: var(--faith-muted); }
+.faith-library-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 6px 12px;
+  border: 1px solid #bccbc3;
+  border-radius: 99px;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--faith-ink);
+}
+.faith-week-intro {
+  background: #142f45;
+  color: #fffdf5;
+  padding-block: clamp(24px, 4.8vw, 58px);
+}
+.faith-week-intro h1 {
+  font-size: clamp(32px, 5vw, 57px);
+  line-height: 1.25;
+  color: inherit;
+  margin: 0 0 9px;
+  letter-spacing: 0;
+}
+.faith-week-intro p { color: #e3ebed; max-width: 660px; font-size: 17px; line-height: 1.6; }
+.faith-week-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+  align-items: start;
+  gap: 24px;
+  margin-block: 27px 54px;
+}
+.faith-lesson,
+.faith-day-menu {
+  min-width: 0;
+  padding: clamp(16px, 3vw, 29px);
+  background: #fffefa;
+  border: 1px solid var(--faith-rule);
+  border-radius: 18px;
+}
+.faith-lesson-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.faith-day-number { color: #536b60; font-size: 14px; font-weight: 700; }
+.faith-choose-day {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: #34564d;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.faith-lesson h2 {
+  font-size: clamp(25px, 3vw, 36px);
+  line-height: 1.35;
+  color: var(--faith-ink);
+  letter-spacing: 0;
+  margin-block: 4px 7px;
+  scroll-margin-top: 16px;
+}
+.faith-lesson-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px 14px;
+  color: var(--faith-muted);
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 13px;
+}
+#faith-lesson-duration { font-variant-numeric: tabular-nums; }
+.faith-screen {
+  display: grid;
+  place-items: center;
+  background: #102638;
+  overflow: hidden;
+  border-radius: 12px;
+}
+.faith-screen iframe {
+  display: block;
+  width: 100%;
+  border: 0;
+  aspect-ratio: 16 / 9;
+}
+.faith-screen-vertical iframe {
+  width: auto;
+  max-width: 100%;
+  height: min(56dvh, 450px);
+  aspect-ratio: 9 / 16;
+}
+.faith-play {
+  display: grid;
+  place-items: center;
+  position: relative;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  isolation: isolate;
+}
+.faith-play img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+.faith-play span {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  background: #fffefa;
+  color: #17364a;
+  font-weight: 700;
+  border-radius: 99px;
+  padding: 10px 16px;
+  box-shadow: 0 4px 20px #0005;
+}
+.faith-play span::before {
+  content: "";
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 9px solid currentColor;
+}
+.faith-play:focus-visible { outline-offset: -5px; }
+.faith-video-tools,
+.faith-day-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px 15px;
+}
+.faith-video-tools a,
+.faith-text-action,
+.faith-next,
+.faith-share {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  color: #315c50;
+  font-weight: 700;
+  font-size: 15px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.faith-text-action { text-align: start; padding: 0; border: 0; background: transparent; }
+.faith-caption-note { font-size: 13px; color: var(--faith-muted); }
+.faith-reflection {
+  margin-block: 17px;
+  padding: 14px 17px;
+  border-inline-start: 3px solid #9cab8c;
+  background: #edf2e8;
+  border-radius: 8px;
+}
+.faith-reflection h3 { font-size: 17px; margin: 0 0 4px; font-weight: 700; color: var(--faith-ink); }
+.faith-reflection p { font-size: 16px; line-height: 1.65; }
+.faith-primary-action {
+  min-height: 44px;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  background: #234942;
+  color: #fff;
+  padding: 8px 15px;
+  font-size: 15px;
+  font-weight: 700;
+}
+.faith-primary-action[aria-pressed="true"] { background: #e6efdf; color: #25493b; }
+.faith-status { color: #315c50; font-size: 14px; }
+.faith-day-menu h2 { font-size: 23px; letter-spacing: 0; }
+.faith-progress { margin-block: 8px 13px; color: var(--faith-muted); }
+.faith-progress progress { display: block; width: 100%; height: 9px; margin-top: 5px; accent-color: #527c62; }
+.faith-day-menu ol { list-style: none; margin: 0; padding: 0; }
+.faith-day-menu li + li { margin-top: 5px; }
+.faith-day-menu a {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 9px;
+  align-items: center;
+  min-height: 47px;
+  padding: 8px 10px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-size: 15px;
+  color: var(--faith-ink);
+}
+.faith-day-menu a:hover { background: #f2f4ee; }
+.faith-day-menu a[aria-current="step"] { border-color: #91aa9c; background: #e8f0e8; }
+.faith-day-title { font-weight: 700; }
+.faith-day-label, .faith-day-state { color: #466258; font-size: 13px; }
+.faith-fallback { padding-block: 30px; }
+.faith-fallback a { text-decoration: underline; }
+.faith-week-footer { background: #142f45; color: #f5f6ef; font-size: 14px; padding-block: 17px; }
+.faith-week-footer a { color: #fff; font-weight: 700; }
+
+@media (max-width: 720px) {
+  .home-faith-access { grid-template-columns: minmax(0, 1fr); gap: 14px; margin-block: 19px 30px; }
+  .home-faith-feature { padding: 20px; border-radius: 17px; }
+  .home-faith-feature p { font-size: 16px; }
+  .home-faith-start { margin-top: 12px; }
+  .home-faith-topics { padding-block: 4px; }
+  .faith-week-body { grid-template-columns: minmax(0, 1fr); gap: 14px; margin-block: 17px 30px; }
+  .faith-week-nav { min-height: 62px; }
+  .faith-week-brand strong { font-size: 19px; }
+  .faith-library-link { font-size: 14px; }
+  .faith-week-intro p { font-size: 16px; }
+  .faith-lesson, .faith-day-menu { border-radius: 13px; }
+  .faith-day-menu { padding-bottom: 13px; }
+}

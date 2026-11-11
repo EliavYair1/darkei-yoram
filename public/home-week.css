@@ -1,0 +1,253 @@
+.home-week {
+  margin-block: clamp(21px, 3vw, 42px) 0;
+  padding: clamp(15px, 3vw, 34px);
+  border: 1px solid #cbd7cf;
+  border-radius: 24px;
+  background: #f1f4ed;
+  color: #153847;
+}
+
+.home-week-heading .eyebrow {
+  margin-block-end: 4px;
+  color: #4a645d;
+}
+
+.home-week h2,
+.home-week h3 {
+  margin: 0;
+  color: inherit;
+  font-family: var(--font-heading);
+  font-weight: 400;
+  line-height: 1.26;
+}
+
+.home-week h2 {
+  margin-block-end: 15px;
+  font-size: clamp(25px, 3.7vw, 39px);
+}
+
+.home-week h3 {
+  font-size: clamp(19px, 2.2vw, 26px);
+}
+
+.home-week-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 13px;
+}
+
+.home-daily,
+.home-yoram-card,
+.home-content-paths {
+  min-width: 0;
+  padding: clamp(12px, 2vw, 22px);
+  border-radius: 17px;
+}
+
+.home-content-paths {
+  border: 1px solid #c2d0c6;
+  background: #fffef8;
+}
+
+.home-daily-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px 12px;
+}
+
+.home-week-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  text-underline-offset: 3px;
+}
+
+.home-week-link:hover {
+  text-decoration: underline;
+}
+
+.home-week .icon {
+  width: 16px;
+  height: 16px;
+}
+
+.home-daily-share {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 6px;
+  min-height: 40px;
+  padding: 5px 10px;
+  border: 1px solid #adc2b7;
+  border-radius: 999px;
+  background: #eff5ee;
+  color: #153847;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.home-daily {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  background: linear-gradient(135deg, #153448, #245853);
+  color: #fff9ea;
+}
+
+.home-daily-top {
+  width: 100%;
+  margin-block-end: 10px;
+}
+
+.home-daily-top .eyebrow {
+  margin: 0;
+  color: #f2daa0;
+}
+
+.home-daily-share {
+  border-color: #f2daa075;
+  background: #f2daa018;
+  color: #fff9ea;
+}
+
+.home-daily #daily-text {
+  margin: 8px 0 14px;
+  color: #f3f2e7;
+  font-size: 17px;
+  line-height: 1.45;
+}
+
+.home-daily .home-week-link {
+  margin-top: auto;
+  color: #ffe2a0;
+}
+
+.home-yoram-card {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  border: 1px solid #dbca9b;
+  background: #fff8e9;
+}
+
+.home-card-kicker {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin: 0 0 6px;
+  color: #3f6058;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.home-yoram-card #yoram-today-summary {
+  margin: 7px 0 13px;
+  color: #405459;
+  font-size: 17px;
+  line-height: 1.45;
+}
+
+.home-yoram-card .home-week-link {
+  margin-block-start: auto;
+}
+
+.home-week-practical {
+  display: grid;
+  align-content: start;
+  gap: 12px;
+}
+
+.home-week-quick-item + .home-week-quick-item {
+  padding-block-start: 12px;
+  border-block-start: 1px solid #d9e2d9;
+}
+
+.home-week-quick-item h3 {
+  font-size: 18px;
+}
+
+.home-week-quick-item p:not(.home-card-kicker) {
+  margin: 3px 0 0;
+  color: #45605c;
+  line-height: 1.4;
+}
+
+.home-week-quick-item p:empty {
+  display: none;
+}
+
+.home-week-quick-item .home-week-link {
+  margin-block-start: 4px;
+  min-height: 30px;
+}
+
+@media (max-width: 920px) {
+  .home-week-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .home-week-practical {
+    grid-column: 1 / -1;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .home-week-quick-item + .home-week-quick-item {
+    padding-block-start: 0;
+    padding-inline-start: 12px;
+    border-block-start: 0;
+    border-inline-start: 1px solid #d9e2d9;
+  }
+}
+
+@media (max-width: 600px) {
+  .home-week-grid,
+  .home-week-practical {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .home-week-quick-item + .home-week-quick-item {
+    padding-block-start: 12px;
+    padding-inline-start: 0;
+    border-block-start: 1px solid #d9e2d9;
+    border-inline-start: 0;
+  }
+
+  .home-daily-share {
+    min-height: 44px;
+  }
+}
+
+.contact-phone {
+  gap: 7px;
+  min-height: 44px;
+}
+
+.join-form .join-consent {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  line-height: 1.6;
+}
+
+.join-form .join-consent input {
+  width: 1.15rem;
+  height: 1.15rem;
+  min-height: 0;
+  flex: 0 0 auto;
+  margin: 0;
+  accent-color: #374534;
+}
+
+.join-form .contact-received {
+  padding: 12px 14px;
+  border: 1px solid #c9d8c4;
+  border-radius: 12px;
+  background: #edf3e9;
+  color: #31542d;
+  font-weight: 700;
+}

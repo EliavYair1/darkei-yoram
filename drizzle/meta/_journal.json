@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1794316157530,
+      "tag": "0000_opposite_mentor",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1794316994938,
+      "tag": "0001_glossy_vargas",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1794395390356,
+      "tag": "0002_famous_alice",
+      "breakpoints": true
+    }
+  ]
+}

@@ -1,0 +1,230 @@
+@font-face {
+  font-family: Assistant;
+  src: url("/assets/fonts/assistant-400.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Assistant;
+  src: url("/assets/fonts/assistant-600.ttf") format("truetype");
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Assistant;
+  src: url("/assets/fonts/assistant-700.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+}
+
+:root {
+  --font-text: Assistant, Arial, sans-serif;
+  --font-heading: "Varela Round", Assistant, Arial, sans-serif;
+}
+
+body {
+  font-family: var(--font-text);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+button, input, select, textarea {
+  font-family: var(--font-text);
+}
+
+h1, h2, .brand strong, .activity-overlay strong {
+  font-family: var(--font-heading);
+}
+
+h3, h4, .eyebrow, .brand small {
+  font-family: var(--font-text);
+}
+
+h3, h4 {
+  font-weight: 600;
+}
+
+.section-heading h2,
+.portal-article h1,
+.directory-hero h1 {
+  text-wrap: balance;
+  line-height: 1.22;
+  letter-spacing: 0;
+}
+
+.eyebrow {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+body > header > .nav > #main-nav,
+.secondary-nav,
+.portal-page-nav {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.nav .button.compact,
+.nav-actions > .button.compact {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.activity-carousel .hero-description {
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.activity-carousel .hero-actions .button {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.section-heading .section-description,
+.heart-topic-section .section-description,
+.heart-content-card > p:not(.heart-card-label),
+.contact-intro > p:not(.eyebrow) {
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.heart-content-card h3,
+.content-card h3,
+.rabbi-video-copy h3,
+.lesson-side-stack .rabbi-video-copy h3 {
+  font-family: var(--font-text);
+  font-weight: 700;
+  line-height: 1.32;
+  letter-spacing: 0;
+}
+
+.heart-card-label,
+.rabbi-video-copy > p,
+.content-meta {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.section-directory .directory-link strong {
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.section-directory .directory-link small {
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.join-form h3 {
+  font-size: 24px;
+}
+
+.join-form > label {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.join-form > label > small {
+  font-size: 12px;
+}
+
+.join-form > input,
+.join-form > select,
+.join-form > textarea {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.join-form .join-actions .button {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.join-form .local-note,
+.join-form .status {
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.contact-topics a {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.portal-article .article-body p {
+  line-height: 1.9;
+}
+
+.article-byline,
+.portal-article .article-breadcrumb,
+.article-topic-links a {
+  font-size: 13px;
+}
+
+.mobile-dock > a,
+.mobile-dock > button {
+  font-size: 11px;
+  font-weight: 600;
+}
+
+@media (min-width: 851px) and (max-width: 1100px) {
+  body > header > .nav > #main-nav,
+  .portal-page-nav {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 600px) {
+  #main-nav a {
+    font-size: 16px;
+  }
+
+  .nav .button.compact,
+  .nav-actions .button.compact {
+    font-size: 12px;
+  }
+
+  .activity-carousel .hero-description,
+  .section-heading .section-description,
+  .heart-topic-section .section-description {
+    font-size: 15px;
+  }
+
+  .activity-carousel .hero-actions .button {
+    font-size: 14px;
+  }
+
+  .section-directory .directory-link strong {
+    font-size: 15px;
+  }
+
+  .section-directory .directory-link small {
+    font-size: 12px;
+  }
+
+  .join-form .join-actions .button {
+    font-size: 13px;
+  }
+}
+
+.footer-grid h3 {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.footer-grid p,
+.footer-grid a:not(.brand),
+.footer-bottom {
+  font-family: var(--font-text);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+/* Shared lesson duration and caption indicators. */
+.video-duration{position:absolute;bottom:9px;left:9px;padding:3px 7px;font-size:12px;font-weight:700;font-variant-numeric:tabular-nums;color:#fff;background:#102c40e8;border-radius:5px;line-height:1.35}
+.video-caption-badge{position:absolute;bottom:9px;right:9px;border-radius:5px;padding:3px 6px;font-size:10px;color:#fff;background:#102c40e8;line-height:1.6}
+
+.home-collection-links{display:flex;align-items:center;flex-wrap:wrap;gap:9px 14px;margin-top:20px;padding-top:18px;border-top:1px solid #dce4df;font-size:14px;color:#66786f}.home-collection-links a{display:inline-flex;align-items:center;min-height:40px;border-radius:99px;background:#eef3ec;padding:7px 14px;color:#274a43;font-weight:600}.home-collection-links a:hover{background:#e3ece1}.home-collection-links a:focus-visible{outline:2px solid #9d802e;outline-offset:3px}@media(max-width:600px){.home-collection-links{gap:8px;font-size:13px}.home-collection-links>span{flex-basis:100%;margin-bottom:2px}.home-collection-links a{font-size:13px;padding-inline:12px}}

@@ -1,0 +1,192 @@
+[data-section-tone="faith"] { --section-color: #41604d; --section-tint: #e8f0e7; }
+[data-section-tone="soul"] { --section-color: #704f69; --section-tint: #f3eaf0; }
+[data-section-tone="love"] { --section-color: #865244; --section-tint: #f7ebe6; }
+[data-section-tone="video"] { --section-color: #355e78; --section-tint: #e9f0f6; }
+[data-section-tone="story"] { --section-color: #65567b; --section-tint: #efebf5; }
+[data-section-tone="shabbat"] { --section-color: #775722; --section-tint: #f6edda; }
+[data-section-tone="family"] { --section-color: #466549; --section-tint: #edf0df; }
+[data-section-tone="activity"] { --section-color: #3a6470; --section-tint: #e6f0f1; }
+[data-section-tone="chesed"] { --section-color: #884c5d; --section-tint: #f6e9ee; }
+[data-section-tone="calendar"] { --section-color: #5e6352; --section-tint: #eeefe8; }
+[data-section-tone="gallery"] { --section-color: #665849; --section-tint: #f1ebe3; }
+[data-section-tone="contact"] { --section-color: #234e51; --section-tint: #e5f0ed; }
+
+.section-directory {
+  padding-block: clamp(36px, 6vw, 64px);
+}
+
+.directory-heading {
+  margin-block-end: 18px;
+}
+
+.directory-heading h2 {
+  font-size: clamp(26px, 3.8vw, 40px);
+}
+
+.directory-intro {
+  margin: 6px 0 0;
+  color: #47605f;
+  font-size: 16px;
+}
+
+.directory-local {
+  margin-block-start: 24px;
+  padding: 16px clamp(12px, 2.5vw, 24px);
+  border: 1px solid #dce5de;
+  border-radius: 18px;
+  background: #f4f7f4;
+}
+
+.directory-local h3 {
+  margin: 0;
+  color: #25494c;
+  font-size: clamp(20px, 2.5vw, 25px);
+}
+
+.directory-links {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  column-gap: clamp(14px, 3vw, 34px);
+}
+
+.directory-local .directory-links {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.directory-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  min-height: 78px;
+  padding-block: 12px;
+  border-bottom: 1px solid #e1e5df;
+  text-decoration: none;
+  color: var(--section-color);
+}
+
+.directory-icon {
+  display: grid;
+  place-items: center;
+  flex: 0 0 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--section-tint);
+}
+
+.directory-icon .icon {
+  width: 20px;
+  height: 20px;
+}
+
+.directory-link strong,
+.directory-link small {
+  display: block;
+}
+
+.directory-link strong {
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.directory-link small {
+  color: #5e6867;
+  font-size: 11px;
+  line-height: 1.45;
+  margin-block-start: 3px;
+}
+
+.directory-link > .icon {
+  width: 14px;
+  height: 14px;
+  flex: 0 0 14px;
+  margin-inline-start: auto;
+}
+
+.directory-link:hover strong,
+.directory-link:focus-visible strong {
+  text-decoration: underline;
+}
+
+section[data-section-tone] {
+  scroll-margin-top: 120px;
+}
+
+section[data-section-tone] .eyebrow::before {
+  background: var(--section-color);
+}
+
+#faith-content {
+  background: #f2f6ef;
+}
+
+#kindness-content {
+  background: #fcf5ef;
+}
+
+#faith-content .section-heading h2,
+#kindness-content .section-heading h2 {
+  color: var(--section-color);
+}
+
+#join {
+  background: #f0f4ee;
+}
+
+.contact-intro h2 {
+  color: var(--section-color);
+}
+
+.contact-topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-block-start: 24px;
+}
+
+.contact-topics a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 13px;
+  background: var(--section-tint);
+  border-radius: 100px;
+  color: var(--section-color);
+  font-size: 12px;
+}
+
+.contact-topics a:hover,
+.contact-topics a:focus-visible {
+  text-decoration: underline;
+}
+
+.contact-topics .icon {
+  width: 15px;
+  height: 15px;
+}
+
+.join-form h3 {
+  margin-block-end: 14px;
+  color: var(--section-color);
+}
+
+.mobile-dock {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+@media (max-width: 960px) {
+  .directory-links { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+@media (max-width: 600px) {
+  .directory-links,
+  .directory-local .directory-links { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .directory-link { gap: 8px; min-height: 70px; }
+  .directory-link strong { font-size: 12px; }
+  .directory-link small { font-size: 10px; }
+  .directory-icon { flex-basis: 32px; height: 32px; }
+  .directory-icon .icon { width: 16px; height: 16px; }
+  .directory-link > .icon { display: none; }
+  .join-actions { flex-wrap: wrap; }
+  section[data-section-tone] { scroll-margin-top: 85px; }
+}

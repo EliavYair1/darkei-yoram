@@ -1,0 +1,540 @@
+.activity-carousel .banner-welcome .hero-copy h1,
+.heart-topic-section .section-heading h2,
+.heart-topic-section .heart-content-card h3 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.activity-carousel .banner-welcome::after {
+  background:
+    radial-gradient(ellipse at 97% 100%, #15675988, transparent 57%),
+    linear-gradient(270deg, #142e43 0 28%, #142e43eb 41%, #142e4350 64%, transparent 100%),
+    linear-gradient(0deg, #142e4366, transparent 52%);
+}
+
+.activity-carousel .banner-welcome .hero-copy h1 {
+  margin-block: 0 17px;
+  font-size: clamp(41px, 4.35vw, 61px);
+  line-height: 1.2;
+}
+
+.activity-carousel .banner-welcome .hero-copy h1 em {
+  color: #f7da89;
+}
+
+.activity-carousel .banner-welcome .hero-description {
+  max-width: 32ch;
+}
+
+.activity-carousel .banner-welcome .hero-actions .button {
+  background: linear-gradient(110deg, #ffe8a5, #f5cf6c);
+  box-shadow: 0 6px 22px #091d2940;
+  color: #172d3e;
+  border-color: #f3d783;
+}
+
+.activity-carousel .banner-welcome .hero-actions .button:hover {
+  background: #ffe7a1;
+  border-color: #ffe7a1;
+}
+
+[data-section-tone="faith"]:is(.heart-topic-section, .directory-spotlight) {
+  --topic-dark: #123e38;
+  --topic-bright: #17665a;
+  --topic-accent: #b7edd1;
+}
+
+[data-section-tone="soul"]:is(.heart-topic-section, .directory-spotlight) {
+  --topic-dark: #37263f;
+  --topic-bright: #6b4a73;
+  --topic-accent: #f2d9ff;
+}
+
+[data-section-tone="love"]:is(.heart-topic-section, .directory-spotlight) {
+  --topic-dark: #6c332a;
+  --topic-bright: #914836;
+  --topic-accent: #ffdabc;
+}
+
+.directory-spotlights {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(8px, 2vw, 20px);
+  margin-block: 0 12px;
+}
+
+.directory-spotlights .directory-spotlight {
+  padding: 18px 16px;
+  border: 0;
+  border-radius: 16px;
+  background:
+    radial-gradient(ellipse at 0 105%, #ffffff21, transparent 55%),
+    linear-gradient(124deg, var(--topic-bright), var(--topic-dark) 80%);
+  color: #fffdf8;
+  box-shadow: 0 4px 12px #172d3e16;
+}
+
+.directory-spotlight .directory-icon {
+  color: var(--topic-accent);
+  background: #ffffff24;
+}
+
+.directory-spotlight small {
+  color: #fffaf2;
+}
+
+.directory-spotlight > .icon {
+  color: var(--topic-accent);
+}
+
+.heart-topic-section {
+  --topic-ink: #192e39;
+  --topic-copy: #425457;
+  --topic-line: #28362c29;
+  padding-block: clamp(34px, 5vw, 72px);
+}
+
+.heart-topic-section .section-heading {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  align-items: end;
+  gap: 20px;
+  padding: clamp(24px, 4vw, 48px);
+  margin-block-end: clamp(18px, 3vw, 34px);
+  border-radius: 22px;
+  background:
+    radial-gradient(ellipse at 5% 100%, #f5d28131, transparent 53%),
+    linear-gradient(117deg, var(--topic-bright) 0%, var(--topic-dark) 86%);
+}
+
+.heart-topic-section .section-heading::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset-inline-end: -60px;
+  bottom: -105px;
+  width: 235px;
+  aspect-ratio: 1;
+  border: 1px solid #f8df9f45;
+  border-radius: 50%;
+  box-shadow: 0 0 0 23px #f8df9f14, 0 0 0 46px #f8df9f0e;
+}
+
+.heart-topic-section:is(#faith-content, #soul-content, #kindness-content) .section-heading h2 {
+  color: #fffaf0;
+  font-size: clamp(33px, 5vw, 61px);
+  line-height: 1.14;
+}
+
+.heart-topic-section .section-heading .eyebrow {
+  margin-block-end: 9px;
+  color: #fce2a8;
+}
+
+.heart-topic-section .section-heading .section-description {
+  margin: 0;
+  color: #fffaf0;
+  font-size: clamp(15px, 1.35vw, 18px);
+  line-height: 1.55;
+  max-width: 39ch;
+}
+
+.heart-topic-section .heart-content-grid {
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  column-gap: clamp(22px, 4.2vw, 62px);
+  row-gap: 0;
+}
+
+.heart-topic-section .heart-content-grid .heart-content-card {
+  padding: 18px 0;
+  border: 0;
+  border-block-end: 1px solid var(--topic-line);
+}
+
+.heart-topic-section .heart-content-grid .heart-content-card:last-child {
+  border: 0;
+}
+
+.heart-topic-section .heart-content-grid .heart-card-featured {
+  grid-row: span 2;
+  overflow: hidden;
+  background: linear-gradient(150deg, #fffaf1, var(--section-tint) 75%);
+  box-shadow: 0 7px 24px #172d3e17;
+  border: 0;
+  border-radius: 20px;
+  padding: 0 24px 18px;
+}
+
+.heart-topic-section .heart-content-grid .heart-content-card:has(.heart-card-thumbnail) {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) clamp(85px, 10vw, 133px);
+  column-gap: 14px;
+  align-items: start;
+  align-content: center;
+}
+
+.heart-card-thumbnail {
+  grid-column: 2;
+  grid-row: 1 / 5;
+  align-self: center;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1.13;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px #192e3929;
+}
+
+.heart-content-card:has(.heart-card-thumbnail) > :not(.heart-card-thumbnail) {
+  grid-column: 1;
+  justify-self: start;
+}
+
+.heart-card-photo {
+  position: relative;
+  align-self: stretch;
+  margin: 0 -24px 16px;
+  overflow: hidden;
+  aspect-ratio: 2.25;
+  background: var(--section-color);
+}
+
+.heart-card-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.heart-card-photo figcaption {
+  position: absolute;
+  inset-inline-start: 14px;
+  bottom: 12px;
+  padding: 3px 9px;
+  border-radius: 20px;
+  background: #142732eb;
+  color: #fff;
+  font-size: 12px;
+}
+
+.heart-topic-section .heart-content-card h3 {
+  color: var(--topic-ink);
+  font-size: clamp(22px, 2.3vw, 30px);
+  line-height: 1.28;
+}
+
+.heart-topic-section .heart-content-card > p:not(.heart-card-label) {
+  color: var(--topic-copy);
+  margin: 7px 0 8px;
+  font-size: 16px;
+  line-height: 1.48;
+}
+
+.heart-topic-section .heart-content-card .heart-card-label {
+  margin: 0 0 5px;
+  color: var(--section-color);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.heart-topic-section .heart-content-card .text-link {
+  color: var(--topic-dark);
+  min-height: 44px;
+  padding: 6px 12px;
+  background: var(--section-tint);
+  border: 1px solid #243b3930;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 700;
+  gap: 9px;
+}
+
+.heart-topic-section .heart-content-card .text-link:is(:hover, :focus-visible) {
+  color: #fff;
+  background: var(--topic-dark);
+}
+
+.heart-topic-section#soul-content .heart-content-card:not(.heart-card-featured) .text-link {
+  background: #fff2;
+  border-color: #fff4;
+}
+
+.heart-topic-section#soul-content .heart-content-card:not(.heart-card-featured) .text-link:is(:hover, :focus-visible) {
+  background: #fff3;
+}
+
+.heart-topic-section .heart-topic-more {
+  margin-block-start: 19px;
+}
+
+.heart-topic-section#soul-content .heart-content-card:not(.heart-card-featured) {
+  --topic-ink: #fffaf0;
+  --topic-copy: #e0e7e9;
+  --topic-line: #ffffff36;
+  --section-color: #f8dda2;
+}
+
+.heart-topic-section#soul-content .heart-content-card h3,
+.heart-topic-section#soul-content .heart-content-card .text-link {
+  color: var(--topic-ink);
+}
+
+.heart-topic-section#soul-content .heart-content-card > p:not(.heart-card-label) {
+  color: var(--topic-copy);
+}
+
+.heart-topic-section#soul-content .heart-content-card .heart-card-label {
+  color: var(--section-color);
+}
+
+@media (max-width: 600px) {
+  .activity-carousel .banner-welcome {
+    --welcome-photo-height: clamp(224px, 65vw, 295px);
+  }
+
+  .activity-carousel .banner-welcome .hero-visual {
+    height: var(--welcome-photo-height);
+  }
+
+  .activity-carousel .banner-welcome .hero-visual > img {
+    object-position: 50% 0 !important;
+  }
+
+  .activity-carousel .banner-welcome::after {
+    background:
+      radial-gradient(ellipse at 0 100%, #126a5e91, transparent 53%),
+      linear-gradient(
+        to bottom,
+        transparent calc(var(--welcome-photo-height) * .45),
+        #142e4399 calc(var(--welcome-photo-height) * .80),
+        #142e43 var(--welcome-photo-height)
+      );
+  }
+
+  .activity-carousel .banner-welcome .hero-copy {
+    padding: calc(var(--welcome-photo-height) - 16px) 0 21px;
+  }
+
+  .activity-carousel .banner-welcome .hero-copy .eyebrow {
+    margin-bottom: 10px;
+    font-size: 10px;
+  }
+
+  .activity-carousel .banner-welcome .hero-copy h1 {
+    font-size: clamp(29px, 8vw, 40px);
+    line-height: 1.16;
+    margin-bottom: 12px;
+  }
+
+  .activity-carousel .banner-welcome .hero-description {
+    font-size: 15px;
+    line-height: 1.48;
+  }
+
+  .activity-carousel .banner-welcome .hero-actions,
+  .activity-carousel .banner-welcome .hero-attribution {
+    margin-top: 13px;
+  }
+
+  .activity-carousel .banner-welcome .hero-actions .button {
+    font-size: 14px;
+    min-height: 44px;
+  }
+
+  .activity-carousel .banner-welcome .hero-attribution {
+    font-size: 10px;
+  }
+
+  .directory-spotlights .directory-spotlight {
+    flex-direction: column;
+    justify-content: start;
+    gap: 7px;
+    min-height: 106px;
+    padding: 10px 5px;
+    border-radius: 13px;
+    text-align: center;
+  }
+
+  .directory-spotlight .directory-icon {
+    flex-basis: auto;
+    width: 30px;
+    height: 30px;
+  }
+
+  .section-directory .directory-spotlight strong {
+    font-size: clamp(12px, 3.4vw, 15px);
+    line-height: 1.3;
+  }
+
+  .section-directory .directory-spotlight small {
+    font-size: 11px;
+    line-height: 1.18;
+  }
+
+  .heart-topic-section .heart-content-grid .heart-content-card:has(.heart-card-thumbnail) {
+    display: flex;
+  }
+
+  .heart-card-thumbnail {
+    aspect-ratio: 3 / 2;
+    margin-block-end: 12px;
+  }
+
+  .heart-topic-section .heart-content-card:has(.heart-card-thumbnail) h3 {
+    font-size: clamp(19px, 5.6vw, 22px);
+  }
+
+  .heart-topic-section .section-heading {
+    align-items: start;
+    border-radius: 16px;
+    gap: 8px;
+    padding: 20px;
+  }
+
+  .heart-topic-section .section-heading .eyebrow {
+    margin-block-end: 7px;
+  }
+
+  .heart-topic-section .heart-content-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .heart-topic-section .heart-content-grid .heart-card-featured {
+    grid-row: auto;
+    padding: 0 17px 10px;
+    border-radius: 15px;
+  }
+
+  .heart-card-photo {
+    margin: 0 -17px 12px;
+    aspect-ratio: 3 / 2;
+  }
+
+  .heart-topic-section .heart-content-grid .heart-content-card:not(.heart-card-featured) {
+    padding-block: 14px 6px;
+    padding-inline: 10px;
+  }
+}
+
+.recent-lessons {
+  margin-block-start: 28px;
+}
+
+.recent-lessons h3 {
+  margin: 0 0 12px;
+  color: #173a49;
+  font-family: var(--font-heading);
+  font-size: clamp(21px, 3vw, 30px);
+  font-weight: 400;
+}
+
+.recent-lessons ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.recent-lessons a {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 12px;
+  height: 100%;
+  min-height: 64px;
+  padding: 9px 12px;
+  border: 1px solid #bacfce;
+  border-radius: 14px;
+  background: #f7faf6;
+  color: #193e46;
+}
+
+.recent-lessons a:is(:hover, :focus-visible) {
+  background: #e3f1ea;
+}
+
+.recent-lesson-icon {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #d8ebe1;
+  color: #194f47;
+}
+
+.recent-lessons .icon {
+  width: 17px;
+  height: 17px;
+}
+
+.recent-lessons small,
+.recent-lessons strong {
+  display: block;
+  line-height: 1.3;
+}
+
+.recent-lessons small {
+  margin-block-end: 3px;
+  color: #42675e;
+  font-size: 13px;
+}
+
+.recent-lessons strong {
+  font-size: 17px;
+  font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  .recent-lessons ul {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.recent-lessons-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  margin-block-end: 12px;
+}
+
+.recent-lessons-heading h3 {
+  margin: 0;
+}
+
+.recent-lessons .chizuk-home-link {
+  display: inline-flex;
+  width: fit-content;
+  min-height: 44px;
+  border-radius: 999px;
+  background: #e0f1e6;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.daily-chizuk-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  min-height: 44px;
+  color: #ffdf8e;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.daily-chizuk-link:hover {
+  text-decoration: underline;
+}
+
+.daily-chizuk-link .icon {
+  width: 17px;
+  height: 17px;
+}
