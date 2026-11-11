@@ -288,7 +288,9 @@ $('#join-form').addEventListener('submit', async event => {
   try {
     const result = await fetch('/api/contact', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+     const result = await fetch('https://yyjdckgnaamfexdvigqk.supabase.co/functions/v1/site-contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inl5amRja2duYWFtZmV4ZHZpZ3FrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzM2NDI0MzcsImV4cCI6MjA4OTIxODQzN30.tUY57Zb9dyB6VmayJxQKm91mYWbSLPJdGWxKZDjRAhs' },,
       body: JSON.stringify({ ...payload, id: pendingContact.id }),
     });
     if (result.ok) {
